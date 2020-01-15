@@ -8,6 +8,7 @@ class Project(models.Model):
     
     def __str__(self):
         return self.name
+    
 class Action(models.Model):
     project_id = models.ForeignKey(Project, on_delete=models.CASCADE)
     description=models.CharField(max_length=128)
