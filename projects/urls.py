@@ -7,5 +7,6 @@ router.register('projects',views.ProjectView)
 router.register('actions',views.ActionView)
 
 urlpatterns = [
-   path('', include(router.urls))
+   path('', include(router.urls)),
+   path('projectactions/<id>/',views.ProjectActions.as_view())
 ]
